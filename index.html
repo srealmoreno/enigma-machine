@@ -1,0 +1,136 @@
+<html>
+  <head>
+    <title>Maquina enigma</title>
+    <link rel="stylesheet" href="css/enigma.css" />
+  </head>
+  <body>
+    <div id="enigma--settings" class="enigma--settings">
+
+      <div class="content">
+        <div class="header">
+          <span id="close" class="close">&times;</span>
+          <h3>Configuración</h3>
+        </div>
+        <div class="body">
+          <table
+            class="enigma--settings-table"
+            cellpadding="4"
+            cellspacing="0"
+            width="100%"
+          >
+            <tbody>
+              <tr>
+                <td>
+                  Reflector:
+                  <select id="reflectorSelection">
+                    <option>UKW-B</option>
+                    <option>UKW-C</option>
+                  </select>
+                </td>
+                <td>3<sup>er</sup> Rotor:</td>
+                <td>2<sup>do</sup> Rotor:</td>
+                <td>1<sup>er</sup> Rotor:</td>
+              </tr>
+              <tr>
+                <td>Tipo de Rotor</td>
+                <td>
+                  <select id="rotor3Selection">
+                    <option>I</option>
+                    <option>II</option>
+                    <option>III</option>
+                    <option>IV</option>
+                    <option>V</option>
+                  </select>
+                </td>
+                <td>
+                  <select id="rotor2Selection">
+                    <option>I</option>
+                    <option selected>II</option>
+                    <option>III</option>
+                    <option>IV</option>
+                    <option>V</option>
+                  </select>
+                </td>
+                <td>
+                  <select id="rotor1Selection">
+                    <option>I</option>
+                    <option>II</option>
+                    <option selected>III</option>
+                    <option>IV</option>
+                    <option>V</option>
+                  </select>
+                </td>
+              </tr>
+              <tr></tr>
+              <tr>
+                <td>Posición inicial</td>
+                <td>
+                  <select id="rotor3Position" class="rotorPosition">
+                </td>
+                <td>
+                  <select id="rotor2Position" class="rotorPosition"></select>
+                </td>
+                <td>
+                  <select id="rotor1Position" class="rotorPosition"></select>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+       <div class="footer" style="height: 40px;"></div>
+      </div>
+    </div>
+    <h1>Máquina Enigma</h1>
+    <div class="enigma">
+      <div class="enigma--machine">
+        <div class="rotors"></div>
+        <div class="line"></div>
+        <div class="light-board add-keys"></div>
+        <div class="line"></div>
+        <div class="key-board add-keys"></div>
+        <div class="line"></div>
+        <div class="plug-board add-keys"></div>
+      </div>
+    </div>
+    <br />
+    <div class="book">
+      <table>
+        <tbody>
+          <tr>
+            <td class="paper-description">
+              Mensaje en claro:
+            </td>
+            <td width="15px"></td>
+            <td class="paper-description">
+              Mensaje Cifrado:
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <textarea readonly class="text-sheet" id="plain-text">|</textarea>
+            </td>
+            <td width="15px"></td>
+            <td>
+              <textarea readonly class="text-sheet" id="encrypt-text">|</textarea>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <button class="new-line">Nueva linea</button>
+    <button class="clean">Limpiar</button>
+    <button class="reset">Restear</button>
+    <button class="silent">Silenciar</button>
+
+  <img class="bla">
+  <img id="bla">
+
+  </body>
+
+  <script src="js/jquery.min.js"></script>
+  <script src="js/enigma.js"></script>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap"
+    rel="stylesheet"
+  />
+</html>
