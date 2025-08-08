@@ -1,0 +1,26 @@
+name: ♻️ Sync Labels
+
+on:
+  workflow_dispatch:
+
+jobs:
+  labels:
+    name: ♻️ Sync labels
+    runs-on: ubuntu-22.04
+    steps:
+      - name: 🚀 Run Label Sync
+        uses: srealmoreno/label-sync-action@v2
+        with:
+          token: ${{ secrets.PERSONAL_ACCESS_TOKEN }}
+
+          # Optional:
+          repositories: |
+            srealmoreno/api-express
+            
+          # Optional:
+          config-file: |
+            https://raw.githubusercontent.com/srealmoreno/label-sync-action/main/.github/labels/labels.yml
+
+          # Optional:
+          # Clean other labels not defined in the config file(s)
+          clean-labels: true
