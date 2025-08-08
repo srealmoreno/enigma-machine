@@ -13,9 +13,7 @@ jobs:
         with:
           token: ${{ secrets.PERSONAL_ACCESS_TOKEN }}
 
-          # Optional:
-          repositories: |
-            srealmoreno/api-express
+          auto-discover-repos: true
             
           # Optional:
           config-file: |
@@ -23,4 +21,4 @@ jobs:
 
           # Optional:
           # Clean other labels not defined in the config file(s)
-          clean-labels: true
+          clean-labels: false
