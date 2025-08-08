@@ -22,3 +22,15 @@ jobs:
           # Optional:
           # Clean other labels not defined in the config file(s)
           clean-labels: false
+
+          # Optional:
+          exclude-forked-repos: false
+
+          # Optional:
+          exclude-archived-repos: false
+
+          # Optional:
+          exclude-private-repos: false
+
+          # Optional:
+          exclude-disabled-repos: false
